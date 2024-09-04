@@ -1,0 +1,18 @@
+{
+"Employee":{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "employmentType": "_blank",
+  "jcr:lastModifiedBy": "admin",
+  "jcr:created": "Sat Apr 20 2024 12:20:13 GMT+0530",
+  "Description": "\u003Cp\u003Ecugfwuhfcigw8f9choadhbciuwyh\u003C/p\u003E\r\n",
+  "id": "1",
+  "tags": "we.reatail/gender/name",
+  "category": "Experienced",
+  "title": "Ayush",
+  "linkURL": "http://localhost:4502/editor.html/conf/service-oklahoma/settings/wcm/templates/home-page/structure.html",
+  "jcr:lastModified": "Sat Apr 20 2024 12:22:23 GMT+0530",
+  "sling:resourceType": "service-oklahoma/components/Employee",
+  "textIsRich": "true"
+}
+}

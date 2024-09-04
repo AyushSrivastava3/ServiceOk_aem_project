@@ -1,0 +1,217 @@
+.text{ 
+  @media(max-width:1023px) {
+    padding: 0 28px;
+  }
+}
+.cmp-text {
+    margin-bottom: 16px;
+    a{
+        color: $color-dark-sky-blue;
+        text-decoration: underline;
+        letter-spacing: 0.5px;
+        &:focus,&.hover{
+          color: $color-dark-sky-blue;
+        }
+      }
+    h1,h2,h3,h4,h5,h6,p{
+        margin: 16px 0;
+        padding-bottom: 16px;
+    }
+
+    h6{
+      line-height: 140%;
+    }
+}
+.text-note{
+    .cmp-text {
+        @extend .body1;
+        border: 1px solid $color-light-sky-blue;
+        border-bottom: 4px solid $color-dark-sky-blue;
+        color: $color-dark-sky-blue;
+        padding: 24px;
+        margin-bottom: 0;
+        background: $color-white;
+        p{
+          padding: 0;
+          margin: 0;
+        }
+    }
+    //No indentation for notes.
+    padding-left: 0;
+    margin-bottom: 24px;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 1024px) {
+      padding-left: 30px;
+    }
+}
+.cmp-text__paragraph {}
+
+.cmp-text, .cmp-contentfragment {
+
+    ul ,ol{
+        display: block;
+        list-style-type: none;
+        padding-inline-start: 0;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+
+        li {
+            padding-left: 54px;
+            position: relative;
+            margin-bottom: 32px;
+            &::before {
+                background-color: $color-light-sky-blue;
+                height: 8px;
+                width: 8px;
+                content: "";
+                display: inline-block;
+                border-radius: 100%;
+                position: absolute;
+                left: 24px;
+                top: 8px;
+            }
+        }
+    }
+    ol{
+        list-style-type: decimal;
+        padding-left: 36px;
+        li{
+            padding-left: 8px;
+            &::before{
+                display: none;
+            }
+        }
+    }
+
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+}
+
+.cmp-text--font-xsmall {
+    p {
+        font-size: 12px;
+    }
+}
+
+.cmp-text--font-small {
+    p {
+        font-size: 12px;
+    }
+}
+
+.cmp-text--font-default {
+    p {
+        font-size: 16px;
+    }
+}
+
+.cmp-text--font-large {
+    p {
+        font-size: 24px;
+    }
+}
+.cmp-text--quote {
+    margin: 1em 0em;
+
+    .cmp-text {
+          padding: 1em;
+    }
+
+    blockquote {
+          margin: 0;
+          font-size: 32px;
+          border: none;
+          padding: 14px 14px;
+          margin-bottom: 0.5em;
+
+          &:after {
+                border-bottom: 2px solid $color-dark-sky-blue;;
+                content: '';
+                display: block;
+                width: 80px;
+                position: relative;
+                top: 0.25em;
+          }
+    }
+
+    u {
+          text-decoration: none;
+    }
+}
+
+.text .cmp-text {
+    overflow: auto;
+    table {
+      width: 100%;
+      border: 0;
+      tbody{
+        tr:first-of-type{
+          td{
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            color: $color-dark-sky-blue;
+            min-height: 60px;
+          //  display: inline-flex;
+            // justify-content: center;
+            // align-items: center;
+            width: 250px;
+            @media (min-width: 992px) {
+              width: 312px;
+            }
+          }
+        }
+      }
+      tr {
+        vertical-align: top;
+       // display: flex;
+        width: 100%;
+        background-color: $color-white;
+        &:nth-child(even) {
+          background: $color-light-light-blue;
+        }
+      }
+      th {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: $color-dark-sky-blue;
+        min-height: 60px;
+      //  display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        @media (min-width: 992px) {
+          width: 312px;
+        }
+      }
+      td {
+        padding: 18px 30px;
+        width: 250px;
+        border-right: solid 4px $color-white;
+        text-align: left;
+        @media (min-width: 992px) {
+          width: 312px;
+        }
+        strong {
+          display: block;
+        }
+        a {
+          color: $color-dark-sky-blue;
+        }
+      }
+    }
+  }

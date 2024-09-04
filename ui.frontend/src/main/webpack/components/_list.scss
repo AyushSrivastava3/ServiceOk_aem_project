@@ -1,0 +1,90 @@
+.list{
+    .cmp-title{
+        margin-bottom: 0;
+    }
+    .links__social--title{
+        padding-bottom: 32px;
+        color: $color-dark-sky-blue;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .links__nav--items a{
+        color: $color-dark-sky-blue;
+        font-size: 16px;
+        font-weight: 600;
+        margin-right: 24px;
+        position: relative;
+        display: inline-block;
+        text-decoration: underline;
+        padding-bottom: 24px;
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+    &__verticle{
+        @media (max-width: 1023px){
+            margin-top: 40px;
+        }
+
+    }
+    &__footer,&__verticle{
+        .links__nav--items{
+            display: inline-flex;
+            flex-direction: column;
+            a{
+                margin-bottom: 12px;
+                margin-right: 0;
+            }
+        }
+    }
+    &__footer,&__header{
+        .links__nav--items{
+            a{
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+    }
+    &__footer{
+        @media (max-width: 767px) {
+            width: 100% !important;
+        }
+        .links__social--title{
+            color:$color-white;
+        }
+        .links__nav--items{
+            a{
+                color: $color-white;
+                font-size: 16px;
+                line-height: 150%;
+                padding-bottom: 0;
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__footer{
+        .links__nav--items{
+            a{
+                &:last-of-type{
+                    margin-right: 0;
+                }
+                &:hover{
+                    text-decoration: underline;
+                    text-decoration-color: $color-white;
+                }
+            }
+        } 
+    }
+    &__header{
+        text-align: right;
+            a{
+                &:hover{
+                    text-decoration: underline;
+                    text-decoration-color: $color-dark-sky-blue;;
+                }
+            }
+    }
+}

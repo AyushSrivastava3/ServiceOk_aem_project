@@ -1,0 +1,28 @@
+<sly data-sly-use.teaser="com.adobe.cq.wcm.core.components.models.Teaser"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"/>
+
+<div data-sly-test="${properties.fileReference}">
+    <div class="cmp-teaser">
+        <div class="cmp-teaser__image">
+            <div class="cmp-image" data-sly-test="${properties.fileReference}"
+                 style="background-image: url(${properties.fileReference @ context='uri'});">
+                <img class="cmp-image__image img-fluid"
+                     alt="${properties.isDecorative ? true : properties.altText}"
+                     src="${properties.fileReference @ context='uri'}">
+            </div>
+            <div class="cmp-teaser__content">
+                <div data-sly-test="${teaser.pretitle}" class="cmp-teaser__pretitle navigation1 mb-2">${teaser.pretitle}</div>
+                <h2 data-sly-test="${teaser.title}" class="cmp-teaser__title mb-3">${teaser.title}</h2>
+                <div data-sly-test="${teaser.description}" class="cmp-teaser__description body1">
+                    ${teaser.description @ context='html'}
+                </div>
+                <div data-sly-test="${teaser.linkURL && properties.linkText}"
+                     class="cmp-teaser__action-container">
+                    <a class="button cmp-button" href="${teaser.linkURL}"
+                       target="${properties.linkTarget ? '_blank' : '_self'}">${properties.linkText}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!properties.fileReference, classAppend='cmp-teaser'}"/>

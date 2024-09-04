@@ -1,0 +1,30 @@
+.tabs{
+    margin-bottom: 24px;        
+    @media(max-width:1023px) {
+        padding: 0 28px;
+    }
+    .cmp-text, .cmp-text p{
+        margin: 0;
+        padding: 0;
+    }
+    .text,.card,.button{
+        padding: 0
+    }
+    .cmp-tabs {
+        //@extend .max-width-container;
+        .cmp-tabs__tab {
+            @extend .h4;
+            color: $color-medium-slate-gray;
+            flex: 1 1 0;
+            border-bottom: 2px solid $color-light-slate-gray;
+            text-align: center;
+            &--active {
+                color: $color-dark-sky-blue;
+                border-bottom: 8px solid $color-light-sky-blue;
+            }
+        }
+        &__tablist {
+            margin-bottom: 24px;
+        }
+    }
+}

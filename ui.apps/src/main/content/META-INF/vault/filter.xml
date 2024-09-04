@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/service-oklahoma/clientlibs"/>
+    <filter root="/apps/service-oklahoma/components"/>
+    <filter root="/apps/service-oklahoma/i18n"/>
+</workspaceFilter>

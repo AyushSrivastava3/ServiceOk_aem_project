@@ -1,0 +1,109 @@
+.big_hero {
+  .hero_bg_img {
+    min-height: 520px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    @media (max-width: 950px) {
+      min-height: 232px;
+    }
+  }
+  .hero_content_block {
+    position: relative;
+    top: 40px;
+    padding-left: 44px;
+    padding-bottom: 40px;
+    @media (max-width: 950px) {
+      top: 32px;
+      padding: 0 28px 32px 28px;
+    }
+    .cmp-hero-title,h1 {
+      max-width: 700px;
+      color: $color-dark-sky-blue;
+      line-height: 120%;
+    }
+    .cmp-hero-title{
+      @extend .h1;
+    }
+    .cmp-hero-description,.h3 {
+      max-width: 700px;
+      margin-bottom: 8px;
+      min-height: 204px;
+      line-height: 140%;
+      @media (min-width: 1024px) {
+        min-height: 102px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.hero{
+  &.title_overlap{
+    .big_hero{
+      .hero_bg_img{
+        min-height: 520px;
+        @media (max-width: 950px) {
+            min-height: 272px;
+          }
+
+        @media (min-width: 1024px) {
+          background-size: contain;
+        }
+    }
+    .hero_content_block{
+        top: -65px;
+        padding-bottom: 0;
+        @media (max-width: 950px) {
+            top: 0;
+            padding-bottom: 8px;
+        }
+        .cmp-hero-description{
+          margin-bottom: -22px;
+          @media (max-width: 950px) {
+            margin-bottom: 0;
+          }
+        }
+    }
+    }
+  }
+  &.full-overlap{
+      .big_hero{
+        position: relative;
+        .hero_content_block{
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-bottom: 0;
+          h1,.cmp-hero-description,h3{
+            color: $color-white;
+          }
+          .cmp-hero-description{
+            margin-bottom: 0;
+            min-height: auto;
+          }
+          .cmp-hero-title{
+            margin-bottom: 8px !important;
+          }
+          .cmp-hero-title,.cmp-hero-description{
+            max-width: 300px;
+          }
+          @media (min-width: 1024px) {
+            .cmp-hero-title,.cmp-hero-description{
+              max-width: 664px;
+            }
+          }
+          @media (max-width: 1023px) {
+            .cmp-hero-description{
+              display: none;
+            }
+          }
+        }
+      }
+  }
+}

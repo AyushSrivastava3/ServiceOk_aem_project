@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Open Sans Font */
+
+
+.h1, h1,
+.h2, h2,
+.h3, h3,
+.h4, h4 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+h1,
+.h1 {
+    font-size: 68px;
+    font-weight: 800;
+}
+
+h2,
+.h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: $color-dark-sky-blue;
+}
+
+h4,
+.h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h5,
+.h5 {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h6,
+.h6 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    line-height: 30px;
+}
+
+.body1,
+.body2,.label-large
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.body1 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.body2,.label-large {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navigation1,
+.caption1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.navigation1 {
+    font-weight: 600;
+}
+
+.navigation2 {
+    font-weight: 400;
+}
+
+.caption1 {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@media (max-width:950px) {
+
+    h1,
+    .h1 {
+        font-size: 36px;
+        font-weight: 800;
+    }
+
+    h2,
+    .h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    h3,
+    .h3 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    h4,
+    .h4 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,31 @@
+<!-- Site search page -->
+<sly data-sly-set.placeholder="${pageProperties.placeholder ? pageProperties.placeholder : 'Search' }"
+     data-sly-set.button="${pageProperties.button ? pageProperties.button : 'Search'}"
+     data-sly-set.results="${pageProperties.searchResultsLabel ? pageProperties.searchResultsLabel : 'Search Results'}"/>
+
+<section class="search-result" data-component-type="searchResult">
+    <div class="cmp-section-container">
+        <div class="search-result__content container">
+            <h2>${results}</h2>
+        </div>
+    </div>
+    <div class="search-result__header">
+        <div class="cmp-section-container">
+            <div class="container">
+                <form id="search-result-form"
+                      action="${'{0}' @ format=[currentPage.path]}">
+                    <div class="cmp-search__field">
+                        <input class="cmp-search__input cmp-search-result__input" data-cmp-hook-search="input" type="text" name="fulltext" placeholder="${'Search' @ i18n}"
+                               role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-invalid="false" aria-expanded="false">
+                        <i class="cmp-search__icon1" role="button" name="search" label="search" tabindex="0" ></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="search-result__innercontent container">
+        <ul></ul>
+    </div>
+    <div class="search-result__pagination row justify-content-center"><ul></ul></div>
+
+</section>

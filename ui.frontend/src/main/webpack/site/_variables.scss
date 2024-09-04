@@ -1,0 +1,79 @@
+
+//== Font
+
+$font-family:           "Open Sans", sans-serif;
+$font-size:             16px;
+$font-height:           1.5;
+
+//== Color
+
+// Normal mode
+$color-foreground:      #464646;
+$color-background:      #ECECEC;
+$color-link:            #2020E0;
+
+// Dark mode
+$color-foreground-dark: invert($color-foreground);
+$color-background-dark: invert($color-background);
+$color-link-dark:       invert($color-link);
+
+// Color Pallate
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-light-sky-blue: #CCE0ED;
+$color-medium-sky-blue: #66A3CA;
+$color-dark-sky-blue: #0066A6;
+
+$color-light-sky-blue-dark-bg: #D2EDF9;
+$color-medium-sky-blue-dark-bg: #77CAEC;
+$color-dark-sky-blue-dark-bg: #1CA6DF;
+
+$color-light-water-blue: #CCDCEB;
+$color-medium-water-blue: #6695C2;
+$color-dark-water-blue: #004E9A;
+
+$color-light-water-blue-dark-bg: #D1E5F2;
+$color-medium-water-blue-dark-bg: #74B0D9;
+$color-dark-water-blue-dark-bg: #187BC0;
+
+$color-light-light-blue: #F4FAFF;
+$color-medium-light-blue: #DEF1FE;
+$color-dark-light-blue: #C8E8FD;
+
+$color-light-slate-gray: #F0F1F2;
+$color-medium-slate-gray: #909090;
+$color-dark-slate-gray: #464646;
+
+$color-light-slate-gray-dark-bg: #E4E4E4;
+$color-medium-slate-gray-dark-bg: #AEAEAE;
+$color-dark-slate-gray-dark-bg: #787878;
+
+$color-light-clay-red: #E9D9D0;
+$color-medium-clay-red: #BD8D73;
+$color-dark-clay-red: #914115;
+
+$color-light-clay-red-dark-bg: #F6DDD2;
+$color-medium-clay-red-dark-bg: #E39879;
+$color-dark-clay-red-dark-bg: #D15420;
+
+$color-light-prairie-gold: #EEE1D4;
+$color-medium-prairie-gold: #CBA47E;
+$color-dark-prairie-gold: #A96728;
+
+$color-light-prairie-gold-dark-bg: #F8E9D4;
+$color-medium-prairie-gold-dark-bg: #EBBC7D;
+$color-dark-prairie-gold-dark-bg: #DE9027;
+
+$color-light-woodland-green: #D6E1D2;
+$color-medium-woodland-green: #84A479;
+$color-dark-woodland-green: #326820;
+
+$color-light-woodland-green-dark-bg: #E0EBD9;
+$color-medium-woodland-green-dark-bg: #A3C38D;
+$color-dark-woodland-green-dark-bg: #669B41;
+
+$header-border:#d9d9d9;
+$card-border: #DEDEDE;
+
+

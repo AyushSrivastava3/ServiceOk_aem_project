@@ -1,0 +1,41 @@
+<sly data-sly-use.content="com.adobe.aem.bcg.core.models.ContentBlockModel"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     class="cmp-title"
+     data-sly-test.hasContent="${content.title || content.description}">
+    <div class="contentblock aem-GridColumn aem-GridColumn--default--12">
+        <div class="cmp-contentblock">
+            <div data-sly-test="${!content.hideImage}" class="left_column  mb-4 mb-lg-0">
+                <img data-sly-test="${content.image}" src="${content.image}" alt="${content.imageDecorativeType ? true : content.altText}"/>
+            </div>
+            <div class="right_column ">
+                <sly data-sly-test="${!content.hideTitle}">
+                    <h2 class="cmp-contentblock-title">${content.title}</h2>
+                </sly>
+                <sly data-sly-test="${!content.hideDescription}">
+                    ${content.description  @ context='html'}
+                </sly>
+                <div class="cb_button_block" data-sly-test="${(content.primaryButtonText && content.primaryButtonLink) || (content.secondaryButtonLink && content.secondaryButtonText)}">
+                    <div data-sly-test="${!content.hidePrimaryButton && content.primaryButtonLink && content.primaryButtonText}"
+                         class="button Default aem-GridColumn aem-GridColumn--default--12">
+                        <a class="button cmp-button"
+                           href="${content.primaryButtonLink}"
+                           target="${content.primaryTarget ? '_blank' : '_self'}"> ${content.primaryButtonText}</a>
+                    </div>
+                    <div data-sly-test="${!content.hideSecondaryButton && content.SecondaryButtonLink && content.SecondaryButtonText }"
+                         class="button Default aem-GridColumn aem-GridColumn--default--12">
+                        <a class="button cmp-button button__filled"
+                           href="${content.SecondaryButtonLink}"
+                           target="${content.SecondaryTarget ? '_blank' : '_self'}"> ${content.SecondaryButtonText}</a>
+                    </div>
+                </div>
+                <div data-sly-test="${!content.hideLink && content.link && content.linkText}"
+                     class="aem-GridColumn aem-GridColumn--default--12">
+                    <a class="button cmp-button button__icon"
+                       href="${content.link}" target="${content.linkTarget ? '_blank' : '_self'}"> ${content.linkText}</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</sly>
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend='cmp-title'}"></sly>

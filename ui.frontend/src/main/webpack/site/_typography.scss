@@ -1,0 +1,394 @@
+@import 'variables';
+// fonts css
+
+$breakpoints: (
+    'mobile-min': (min-width: 320px),
+    'mobile-max': (max-width: 767px),
+    'mobile-min-max': (min-max: 320px) and (max-width: 767px),
+    'tablet-min': (min-width: 768px),
+    'tablet-max': (max-width: 1024px),
+    'tablet-min-max': (min-max: 768px) and (max-width: 1024px),
+    'large-desktop-min': (min-width: 1200px),
+    'desktop-max': (max-width: 1199px),
+    'desktop-min': (min-width: 1025px),
+    'small-mobile-max': (max-width: 359px),
+    'small-mobile-min': (min-width: 360px),
+    'portrait-mobile-max': (max-width: 575px),
+    'portrait-mobile-min': (min-width: 576px),
+    'custom-small-mobile-max': (max-width: 374px),
+    'custom-small-mobile-min': (min-width: 375px),
+    'custom-small-plus-mobile-min': (min-width: 414px)
+);
+
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+        @media screen and #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Couldn't find a breakpoint named `#{$name}`.";
+    }
+}
+
+span{
+    font-size: 14px;
+    color: $color-medium-slate-gray;
+    display: inline-flex;
+}
+
+.fontsTopBg{
+    background-color: $color-dark-sky-blue;
+    padding: 25px;
+    width: 100%;
+    font-weight: bold;
+    color: $color-white;
+    font-size: 24px;
+    position: relative;
+    margin-bottom: 40px;
+    svg{
+        position: absolute;
+        right: 5%;
+        cursor: pointer;
+        &.active{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.typographySeperator{
+    font-size: 24px;
+    float: left;
+    margin: 0px 7px;
+    line-height: 10px;
+}
+
+p{
+    margin-bottom: 0;
+}
+a, a:active, a:hover, a:visited {
+    // we need this for accessiblity
+    text-decoration: underline;
+    font-weight: 600;
+    color: $color-dark-sky-blue;
+}
+
+.navigation1{
+    font-weight: 600;
+}
+.seperateLine{
+    border-bottom: solid 1px #757575;
+    margin: 15px 0px;
+    width: 100%;
+    float: left;
+}
+.max-width-container{
+    max-width: 1024px;
+	padding-left: 0;
+	padding-right: 0;
+    margin: 0 auto;
+}
+.typoTitle{
+    margin-bottom: 0px;
+    color: black;
+    margin-top: 50px;
+}
+
+.typographyDesc{
+    width: 100%;
+    font-size: 16px;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.color-white {
+    color: $color-white;
+}
+
+.bg-color-white {
+    background-color: $color-white;
+}
+
+.color-black {
+    color: $color-black;
+}
+
+.bg-color-black {
+    background-color: $color-black;
+}
+
+.color-light-sky-blue {
+    color: $color-light-sky-blue;
+}
+.bg-color-light-sky-blue {
+    background-color: $color-light-sky-blue;
+}
+
+.color-medium-sky-blue {
+    color: $color-medium-sky-blue;
+}
+.bg-color-medium-sky-blue {
+    background-color: $color-medium-sky-blue;
+}
+
+.color-dark-sky-blue {
+    color: $color-dark-sky-blue;
+}
+.bg-color-dark-sky-blue {
+    background-color: $color-dark-sky-blue;
+}
+
+.color-light-sky-blue-dark-bg {
+    color: $color-light-sky-blue-dark-bg;
+}
+.bg-color-light-sky-blue-dark-bg {
+    background-color: $color-light-sky-blue-dark-bg;
+}
+
+.color-medium-sky-blue-dark-bg {
+    color: $color-medium-sky-blue-dark-bg;
+}
+.bg-color-medium-sky-blue-dark-bg {
+    background-color: $color-medium-sky-blue-dark-bg;
+}
+
+.color-dark-sky-blue-dark-bg {
+    color: $color-dark-sky-blue-dark-bg;
+}
+.bg-color-dark-sky-blue-dark-bg {
+    background-color: $color-dark-sky-blue-dark-bg;
+}
+
+.color-light-water-blue{
+    color: $color-light-water-blue;
+}
+.bg-color-light-water-blue {
+    background-color: $color-light-water-blue;
+}
+
+.color-medium-water-blue{
+    color: $color-medium-water-blue;
+}
+.bg-color-medium-water-blue {
+    background-color: $color-medium-water-blue;
+}
+
+.color-dark-water-blue{
+    color: $color-dark-water-blue;
+}
+.bg-color-dark-water-blue {
+    background-color: $color-dark-water-blue;
+}
+
+.color-light-water-blue-dark-bg{
+    color: $color-light-water-blue-dark-bg;
+}
+.bg-color-light-water-blue-dark-bg {
+    background-color: $color-light-water-blue-dark-bg;
+}
+.color-medium-water-blue-dark-bg{
+    color: $color-medium-water-blue-dark-bg;
+}
+
+.bg-color-medium-water-blue-dark-bg {
+    background-color: $color-medium-water-blue-dark-bg;
+}
+.color-medium-water-blue-dark-bg{
+    color: $color-medium-water-blue-dark-bg;
+}
+
+.bg-color-dark-water-blue-dark-bg {
+    background-color: $color-dark-water-blue-dark-bg;
+}
+.color-dark-water-blue-dark-bg{
+    color: $color-dark-water-blue-dark-bg;
+}
+
+.bg-color-light-light-blue {
+    background-color: $color-light-light-blue;
+}
+.color-light-light-blue{
+    color: $color-light-light-blue;
+}
+
+.bg-color-medium-light-blue {
+    background-color: $color-medium-light-blue;
+}
+.color-medium-light-blue{
+    color: $color-medium-light-blue;
+}
+
+.bg-color-dark-light-blue {
+    background-color: $color-dark-light-blue;
+}
+.color-dark-light-blue{
+    color: $color-dark-light-blue;
+}
+
+.bg-color-light-slate-gray {
+    background-color: $color-light-slate-gray;
+}
+.color-light-slate-gray{
+    color: $color-light-slate-gray;
+}
+
+.bg-color-medium-slate-gray {
+    background-color: $color-medium-slate-gray;
+}
+.color-medium-slate-gray{
+    color: $color-medium-slate-gray;
+}
+
+.bg-color-dark-slate-gray {
+    background-color: $color-dark-slate-gray;
+}
+.color-dark-slate-gray{
+    color: $color-dark-slate-gray;
+}
+
+.bg-color-light-slate-gray-dark-bg {
+    background-color: $color-light-slate-gray-dark-bg;
+}
+.color-light-slate-gray-dark-bg{
+    color: $color-light-slate-gray-dark-bg;
+}
+
+.bg-color-medium-slate-gray-dark-bg {
+    background-color: $color-medium-slate-gray-dark-bg;
+}
+.color-medium-slate-gray-dark-bg{
+    color: $color-medium-slate-gray-dark-bg;
+}
+
+.bg-color-dark-slate-gray-dark-bg {
+    background-color: $color-dark-slate-gray-dark-bg;
+}
+.color-dark-slate-gray-dark-bg{
+    color: $color-dark-slate-gray-dark-bg;
+}
+
+.bg-color-light-clay-red {
+    background-color: $color-light-clay-red;
+}
+.color-light-clay-red{
+    color: $color-light-clay-red;
+}
+
+.bg-color-medium-clay-red {
+    background-color: $color-medium-clay-red;
+}
+.color-medium-clay-red{
+    color: $color-medium-clay-red;
+}
+
+.bg-color-dark-clay-red {
+    background-color: $color-dark-clay-red;
+}
+.color-dark-clay-red{
+    color: $color-dark-clay-red;
+}
+
+.bg-color-light-clay-red-dark-bg {
+    background-color: $color-light-clay-red-dark-bg;
+}
+.color-light-clay-red-dark-bg{
+    color: $color-light-clay-red-dark-bg;
+}
+
+.bg-color-medium-clay-red-dark-bg {
+    background-color: $color-medium-clay-red-dark-bg;
+}
+.color-medium-clay-red-dark-bg{
+    color: $color-medium-clay-red-dark-bg;
+}
+
+.bg-color-dark-clay-red-dark-bg {
+    background-color: $color-dark-clay-red-dark-bg;
+}
+.color-dark-clay-red-dark-bg{
+    color: $color-dark-clay-red-dark-bg;
+}
+
+.bg-color-light-prairie-gold {
+    background-color: $color-light-prairie-gold;
+}
+.color-light-prairie-gold{
+    color: $color-light-prairie-gold;
+}
+
+.bg-color-medium-prairie-gold {
+    background-color: $color-medium-prairie-gold;
+}
+.color-medium-prairie-gold{
+    color: $color-medium-prairie-gold;
+}
+
+.bg-color-dark-prairie-gold {
+    background-color: $color-dark-prairie-gold;
+}
+.color-dark-prairie-gold{
+    color: $color-dark-prairie-gold;
+}
+
+.bg-color-light-prairie-gold-dark-bg {
+    background-color: $color-light-prairie-gold-dark-bg;
+}
+.color-light-prairie-gold-dark-bg{
+    color: $color-light-prairie-gold-dark-bg;
+}
+
+.bg-color-medium-prairie-gold-dark-bg {
+    background-color: $color-medium-prairie-gold-dark-bg;
+}
+.color-medium-prairie-gold-dark-bg{
+    color: $color-medium-prairie-gold-dark-bg;
+}
+
+.bg-color-dark-prairie-gold-dark-bg {
+    background-color: $color-dark-prairie-gold-dark-bg;
+}
+.color-dark-prairie-gold-dark-bg{
+    color: $color-dark-prairie-gold-dark-bg;
+}
+
+.bg-color-light-woodland-green {
+    background-color: $color-light-woodland-green;
+}
+.color-light-woodland-green{
+    color: $color-light-woodland-green;
+}
+
+.bg-color-medium-woodland-green {
+    background-color: $color-medium-woodland-green;
+}
+.color-medium-woodland-green{
+    color: $color-medium-woodland-green;
+}
+
+.bg-color-dark-woodland-green {
+    background-color: $color-dark-woodland-green;
+}
+.color-dark-woodland-green{
+    color: $color-dark-woodland-green;
+}
+
+.bg-color-light-woodland-green-dark-bg {
+    background-color: $color-light-woodland-green-dark-bg;
+}
+.color-light-woodland-green-dark-bg{
+    color: $color-light-woodland-green-dark-bg;
+}
+
+.bg-color-medium-woodland-green-dark-bg {
+    background-color: $color-medium-woodland-green-dark-bg;
+}
+.color-medium-woodland-green-dark-bg{
+    color: $color-medium-woodland-green-dark-bg;
+}
+
+.bg-color-dark-woodland-green-dark-bg {
+    background-color: $color-dark-woodland-green-dark-bg;
+}
+.color-dark-woodland-green-dark-bg{
+    color: $color-dark-woodland-green-dark-bg;
+}

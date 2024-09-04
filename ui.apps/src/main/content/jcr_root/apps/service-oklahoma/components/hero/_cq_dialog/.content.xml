@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Hero"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[core.wcm.components.image.v2.editor]"
+          helpPath="https://www.adobe.com/go/aem_cmp_image_v2"
+          trackingFeature="core-components:image:v2">
+    <content
+            jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured"
+                       sling:hideChildren="metadata">
+                    <asset
+                            jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <file
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fileNameParameter="./fileName"
+                                                    fileReferenceParameter="./fileReference"
+                                                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                    multiple="{Boolean}false"
+                                                    name="./file"
+                                                    title="Upload Image Asset"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                            <is-decorative
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./isDecorative"
+                                                    text="Image is decorative"
+                                                    value="true">
+                                            </is-decorative>
+                                            <alt
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Alt Text"
+                                                    name="./alt">
+                                            </alt>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </asset>
+                    <content
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Content"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <type
+                                                    granite:class="cmp-herobanner-options-mobiletabletimages cq-dialog-dropdown-showhide"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Hero Type"
+                                                    name="./heroType">
+                                                <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        cq-dialog-dropdown-showhide-target=".subtitle-showhide-target"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <bighero
+                                                            jcr:primaryType="nt:unstructured"
+                                                            selected="{Boolean}true"
+                                                            text="Big Hero "
+                                                            value="big_hero"/>
+                                                    <smallhero
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Small Hero"
+                                                            value="small_hero"/>
+                                                </items>
+                                            </type>
+                                            <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Title"
+                                                    name="./title"/>
+                                            <subtitleset
+                                                    jcr:primaryType="nt:unstructured"
+                                                    granite:class="subtitle-showhide-target"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                    margin="{Boolean}true">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <subtitle
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    granite:class="subtitle-showhide-target"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldLabel="Sub Title"
+                                                                    name="./subTitle">
+                                                                <granite:data
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        showhidetargetvalue="small_hero"/>
+                                                            </subtitle>
+                                                        </items>
+                                                    </column>
+                                                </items>
+                                                <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        showhidetargetvalue="small_hero"/>
+                                            </subtitleset>
+                                            <description
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    name="./description"
+                                                    fieldLabel="Description"
+                                                    useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceSuperType="service-oklahoma/components/teaser/cq:dialog/content/items/tabs/items/text/items/columns/items/column/items/descriptionGroup/items/description/rtePlugins"/>
+                                                <uiSettings
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceSuperType="service-oklahoma/components/teaser/cq:dialog/content/items/tabs/items/text/items/columns/items/column/items/descriptionGroup/items/description/uiSettings"/>
+                                            </description>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </content>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

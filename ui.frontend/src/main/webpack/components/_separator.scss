@@ -1,0 +1,110 @@
+.separator{ 
+    //@extend .max-width-container;
+    .cmp-separator__horizontal-rule {
+        //display: none;
+        margin: 0;
+        border: 0;
+    } 
+    // @include breakpoint(mobile-max) {
+    //     padding-bottom: 4px;
+    // }
+    // padding-bottom: 8px;
+    // &__sm{
+    //     @include breakpoint(mobile-max) {
+    //         padding-bottom: 12px;
+    //     }
+    //     padding-bottom: 16px;
+    // }
+    // &__md{
+    //     @include breakpoint(mobile-max) {
+    //         padding-bottom: 20px;
+    //     }
+    //     padding-bottom: 24px;
+    // }
+    // &__lg{
+    //     @include breakpoint(mobile-max) {
+    //         padding-bottom: 32px;
+    //     }
+    //     padding-bottom: 40px;
+    // }
+    // &__lg64{
+    //     @include breakpoint(mobile-max) {
+    //         padding-bottom: 56px;
+    //     }
+    //     padding-bottom: 64px;
+    // }
+    // &__xlg{
+    //     @include breakpoint(mobile-max) {
+    //         padding-bottom: 96px;
+    //     }
+    //     padding-bottom: 120px;
+    // }
+}
+
+.separator{ 
+    .cmp-separator{
+        .cmp-separator__horizontal-rule{
+            @include breakpoint(mobile-max) {
+                padding-bottom: 4px;
+            }
+            padding-bottom: 8px;
+        }
+    }
+
+    &__sm{
+        .cmp-separator{
+            .cmp-separator__horizontal-rule{
+                @include breakpoint(mobile-max) {
+                    padding-bottom: 12px;
+                }
+                padding-bottom: 16px;
+            }
+        }
+
+    }
+    &__md{
+        .cmp-separator{
+            .cmp-separator__horizontal-rule{
+                @include breakpoint(mobile-max) {
+                    padding-bottom: 20px;
+                }
+                padding-bottom: 24px;
+            }
+        }
+
+    }
+    &__lg{
+        .cmp-separator{
+            .cmp-separator__horizontal-rule{
+                @include breakpoint(mobile-max) {
+                    padding-bottom: 32px;
+                }
+                padding-bottom: 40px;
+            }
+        }
+
+    }
+    &__lg64{
+        .cmp-separator{
+            .cmp-separator__horizontal-rule{
+                @include breakpoint(mobile-max) {
+                    padding-bottom: 56px;
+                }
+                padding-bottom: 64px;
+            }
+        }
+
+    }
+    &__xlg{
+        .cmp-separator{
+            .cmp-separator__horizontal-rule{
+                @include breakpoint(mobile-max) {
+                    padding-bottom: 96px;
+                }
+                padding-bottom: 120px;
+            }
+        }
+
+    }
+
+}

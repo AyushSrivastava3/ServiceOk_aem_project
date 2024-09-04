@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/service-oklahoma" mode="update"/>
+    <filter root="/content/service-oklahoma" mode="merge"/>
+    <filter root="/content/dam/service-oklahoma/asset.jpg" mode="merge"/>
+	<filter root="/content/dam/service-oklahoma/logos" mode="merge"/>
+	<filter root="/content/dam/service-oklahoma/social-media-icons" mode="merge"/>
+    <filter root="/content/experience-fragments/service-oklahoma" mode="merge"/>
+</workspaceFilter>

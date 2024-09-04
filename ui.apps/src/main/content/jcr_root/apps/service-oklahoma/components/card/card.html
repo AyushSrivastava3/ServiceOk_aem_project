@@ -1,0 +1,23 @@
+<sly data-sly-use.card="com.adobe.aem.bcg.core.models.CardModel"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-set.temp="${ card.imageEmpty || !card.title }"/>
+
+<section data-sly-test="${ !card.imageEmpty || card.title}" class="cmp-card">
+    <div class="cards">
+        <img data-sly-test="${!card.imageEmpty}" src="${card.image}" alt="${card.imageDecorativeType ? true : card.altText}" class="cmp-card-image img-fluid"/>
+        <div data-sly-test="${card.title}" class="cards_info">
+            <div data-sly-test="${card.overLineText}"
+                 class="overline mb-1 cmp-card-overline">${card.overLineText}</div>
+            <h3 data-sly-test="${card.title}" class="cmp-card-title">${card.title}</h3>
+            <div class="card_description" data-sly-test="${card.description}">
+                <p
+                        class="cmp-card-description label-large">${card.description @ context='html'}</p>
+            </div>
+            <a data-sly-test="${card.link && card.linkText}" href="${card.link}"
+               class="button cmp-button button__icon" target="${card.linkTarget ? '_blank' : '_self'}">
+                ${card.linkText}
+            </a>
+        </div>
+    </div>
+</section>
+<sly data-sly-call="${template.placeholder @ isEmpty=temp, classAppend='cmp-image'}"/>

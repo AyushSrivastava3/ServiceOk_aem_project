@@ -1,0 +1,13 @@
+<div data-sly-use.model="com.adobe.aem.bcg.core.models.ListModel"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     class="links cmp-title"
+     data-sly-test.mainLabel="${model.links.size > 0}">
+
+    <p class="links__social--title label-large" data-sly-test.linksLabel="${model.linksLabel}" >${linksLabel}</p>
+    <div class="links__nav--items" data-sly-list="${model.links}">
+        <a href="${item.link}"
+           target="${item.targetNewWindow ? '_blank' : '_self'}">${item.linkText}</a>
+    </div>
+
+</div>
+<sly data-sly-call="${template.placeholder @ isEmpty=!mainLabel, classAppend='cmp-title'}"></sly>

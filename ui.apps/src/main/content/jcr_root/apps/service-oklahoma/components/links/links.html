@@ -1,0 +1,9 @@
+<sly data-sly-use.linksModel="com.adobe.aem.bcg.core.models.LinksModel"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-call="${template.placeholder @ isEmpty=linksModel.links.size == 0, classAppend='cmp-list'}"/>
+
+Links Label: ${linksModel.linksLabel}
+<sly data-sly-list="${linksModel.links}">
+    Link${itemList.count}: <a href="${item.link}"
+                              target="${item.targetNewWindow ? '_blank' : '_self'}">${item.linkText}</a>
+</sly>

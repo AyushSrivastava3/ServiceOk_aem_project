@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/service-oklahoma/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Header"
+        sling:resourceType="service-oklahoma/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="service-oklahoma/components/container"
+            layout="responsiveGrid">
+            <separator
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="service-oklahoma/components/separator"/>
+            <image
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="service-oklahoma/components/image"
+                alt="Service OkLahoma"
+                altValueFromDAM="false"
+                displayPopupTitle="false"
+                fileReference="/content/dam/service-oklahoma/logos/SOK_Logo.svg"
+                isDecorative="false"
+                linkURL="/content/service-oklahoma/us/en"
+                titleValueFromDAM="false">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="4"/>
+                </cq:responsive>
+            </image>
+            <list
+                cq:styleIds="[1662695523442]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="service-oklahoma/components/list">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="8"/>
+                </cq:responsive>
+                <links jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        link="#"
+                        linkText="Locations"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        link="#"
+                        linkText="About"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        link="#"
+                        linkText="Help"/>
+                </links>
+            </list>
+            <search
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="service-oklahoma/components/search"
+                    searchPage="/content/service-oklahoma/us/en/searchresults"
+                    searchRoot="/content/service-oklahoma/us/en">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="3"/>
+                </cq:responsive>
+            </search>
+            <navigation
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="service-oklahoma/components/navigation"
+                collectAllPages="true"
+                disableShadowing="false"
+                navigationRoot="/content/service-oklahoma/us/en"
+                structureDepth="3"
+                structureStart="1"/>
+        </root>
+    </jcr:content>
+</jcr:root>

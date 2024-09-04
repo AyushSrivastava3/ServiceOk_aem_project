@@ -1,0 +1,204 @@
+.cmp-search {
+    position: static;
+    @media(min-width:1024px) {
+        position: absolute;
+        top: 16px;
+	}
+	@media(max-width:1023px) {
+		display: none;
+	}
+    .search-tag{
+        &:focus{
+            .cmp-search__icon1{
+                outline-style: solid;
+            }
+        }
+
+    }
+}
+.cmp-search__form {
+    position: relative;
+    @media(max-width:1023px) {
+        margin: 0 28px;
+    }
+    
+}
+.cmp-search__field {
+    @media(max-width:1023px) {
+       margin-top: 14px;
+       margin-bottom: 14px;
+    }   
+   
+    @media(min-width:1024px) {
+        width: 180px;
+    }
+
+}
+.cmp-search__icon1,.cmp-search-results__icon{
+    position: absolute;
+    right: 12px;
+    left: auto;
+    background-image: url('../resources/images/search-icon.svg') !important;
+    background-size: cover;
+    top: 14px;
+    cursor: pointer;
+}
+.cmp-search__icon1{
+    height: 14px;
+    width: 16px;
+}
+.cmp-search__input,.search-result input.form-control{
+    border: 1px solid #E4E4E4;
+    height: 38px;
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    width: 100%;
+    @media(min-width:1024px) {
+        width: 181px;  
+    }
+    &:focus{
+        box-shadow: none;
+    }
+    &:focus-visible{
+        outline: none;
+    }
+    &::placeholder {
+        color: #909090;
+        opacity: 1; /* Firefox */
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+      }
+      
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #909090;
+      }
+      
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: #909090;
+      }
+}
+.cmp-search__loading-indicator {}
+.cmp-search__clear {}
+.cmp-search__clear-icon {}
+.cmp-search__results {
+    width: 180px;
+    overflow-x: hidden; 
+    margin-top: 6px;   
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 5px 4px rgb(0 0 0 / 8%);
+}
+.cmp-search__item {
+    margin: 12px 12px 0 12px;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+    &:last-of-type{
+        margin-bottom: 16px;
+    }
+}
+.cmp-search__item--is-focused {}
+.cmp-search__item-title,.cmp-search__item-mark {
+    padding: 0;
+    background-color: #FFF;
+    color: #0066A6;
+    letter-spacing: 0.002em;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    display: inline-block;
+}
+.cmp-search__item-mark {
+    font-weight: 600;
+   
+}
+.cmp-search__item-title {
+}
+.search-result{
+    #search-result-form{
+        
+        position: relative;
+        @media(min-width:1024px) {
+           // width: 181px;
+            width: 400px;
+        }
+        .cmp-search__input,.cmp-search__field{
+            @media(min-width:1024px) {
+                // width: 181px;
+                 width: 400px;
+             }
+        }
+        
+    }
+    @media(max-width:1023px) {
+        margin: 28px;
+    }
+    
+    h2{
+        margin: 30px 0;
+    }
+    .search-result__innercontent{
+    margin: 30px 0;
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            margin-bottom: 42px;
+            a{
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 140%;
+                letter-spacing: 0.003em;
+                color: #0066A6;
+                margin-bottom: 4px;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            P{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: #464646;
+            }
+        }
+    }
+
+    }
+}
+.search-result__pagination{
+   ul{
+        list-style: none;
+        margin: 0;
+        display: flex;
+        justify-content: right;
+        padding: 0;
+        li{
+            color: #0066A6;
+            cursor: pointer;
+            letter-spacing: 0.002em;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 150%;
+            margin-right: 26px;
+            &:last-child{
+                margin-right: 0;
+            }
+            &.active{
+                color: #909090;
+            }
+
+            a{
+                text-decoration: none;
+                &.disabled{
+                    color: #909090;
+                    pointer-events: none;
+                }
+            }
+        }
+   } 
+}

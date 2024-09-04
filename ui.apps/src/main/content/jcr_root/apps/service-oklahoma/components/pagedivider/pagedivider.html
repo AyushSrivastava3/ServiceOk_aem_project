@@ -1,0 +1,14 @@
+<sly data-sly-use.divider="com.adobe.aem.bcg.core.models.PageDividerModel"
+     data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${divider.description}">
+
+    <section class="cmp-pagedivider page_divider">
+        <div class="cmp-pagedivider-description pd_content_block">
+            <h2 data-sly-element="${divider.headingTag}">${divider.description} </h2>
+           </div>
+           <div data-sly-test="${divider.image}" class="pd_img_block  d-md-block">
+            <img class="cmp-pagedivider-image" src="${divider.image}" alt="${divider.imageDecorativeType ? true : divider.altText}" />
+         </div>
+    </section>
+</sly>
+<sly data-sly-call="${template.placeholder @ isEmpty=!hasContent, classAppend='cmp-page-divider'}"/>
