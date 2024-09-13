@@ -9,7 +9,7 @@
                             <items jcr:primaryType="nt:unstructured">
                                 <column jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
                                     <items jcr:primaryType="nt:unstructured">
-                                        <card jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser" fieldLabel="Image" name="./cardImage" rootPath="/content/dam/service-oklahoma"/>
+                                        
                                         <overlinetitle jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="OverLine Text" name="./overLineText"/>
                                         <title jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/form/textfield" fieldLabel="Title1" name="./title"/>
                                         <description jcr:primaryType="nt:unstructured" sling:resourceType="cq/gui/components/authoring/dialog/richtext" fieldLabel="Description1" name="./description" useFixedInlineToolbar="{Boolean}true">
