@@ -23,15 +23,7 @@
                                     <column
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
-                                        <items jcr:primaryType="nt:unstructured">
-                                            <resultssearchRoot
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="cq/gui/components/coral/common/form/pagefield"
-                                                fieldLabel="Search Results Page"
-                                                name="./searchPage"
-                                                required="{Boolean}true"
-                                                rootPath="/content/service-oklahoma/us/en"/>
-                                        </items>
+                                        
                                     </column>
                                 </items>
                             </columns>
